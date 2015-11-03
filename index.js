@@ -6,5 +6,6 @@ function extend (base, module) {
 
 var scale = require('music.scale.build')
 extend(scale, require('music.scale.dictionary'))
+scale.pattern = require('music.scale.pattern')
 
 module.exports = scale

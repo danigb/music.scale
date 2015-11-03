@@ -9,5 +9,8 @@ vows.describe('scale').addBatch({
   },
   'scale.get': function () {
     assert.deepEqual(scale.get('major', 'C'), [ 'C', 'D', 'E', 'F', 'G', 'A', 'B' ])
+  },
+  'scale.pattern': function () {
+    assert(scale.pattern)
   }
 }).export(module)

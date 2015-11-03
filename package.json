@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "vows --spec test/*.js",
-    "docs": "docme API.md",
+    "docs": "documentation -f md node_modules/music.scale.build/index.js node_modules/music.scale.dictionary/ node_modules/music.scale.pattern/index.js > API.md",
     "dist": "browserify index.js | uglifyjs > dist/music.scale.min.js&& ls -all dist/",
     "disc": "browserify --full-paths index.js | uglifyjs | discify > tmp/disc.html&& open tmp/disc.html",
     "coverage": "istanbul cover vows test/*.js",
@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "music.scale.build": "0.0.x",
-    "music.scale.dictionary": "file:../scale.dictionary"
+    "music.scale.dictionary": "file:../scale.dictionary",
+    "music.scale.pattern": "file:../scale.pattern"
   }
 }
